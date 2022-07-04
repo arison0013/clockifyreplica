@@ -1,0 +1,60 @@
+<div class="main">
+  <form action="" [formGroup]="registerForm" (ngSubmit)="submitData()">
+  <mat-card class="mat-div">
+    <div class="Input-div">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput maxlength="256" placeholder="what to do...">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="selector">
+      <mat-form-field>
+        <mat-label>Projects</mat-label>
+        <mat-select [formControl]="projectControl" class="none">
+          <mat-form-field style="width: 100%;" appearance="fill">
+            <input type="search" matInput  [(ngModel)]="filterText" placeholder="Search">
+          </mat-form-field>
+          <mat-optgroup *ngFor="let project of projects | filter:filterText" [label]="project.name" >
+            <mat-option *ngFor="let task of project.tasks | filter:filterText" [value]="projects">{{task.name}}</mat-option>
+          </mat-optgroup>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="icon-div">
+      <mat-label *ngIf="!selectValue.length" class="selector-div">
+        <mat-icon (click)="handleHoursType()">loyalty</mat-icon>
+      </mat-label>
+      <mat-select #mySelect multiple [(value)]="selectValue">
+        <mat-option value="Fixed">Fixed</mat-option>
+        <mat-option value="Hourly">Hourly</mat-option>
+        <mat-option value="Internal">Internal</mat-option>
+        <mat-option value="Fixed">Fixed</mat-option>
+      </mat-select>
+    </div>
+    <div class="timepicker-div">
+      <input [ngxTimepicker]="pickerStartDate" class="timepicker-design" formControlName="Startdate" (keydown)="validateNumber($event)">
+      <ngx-material-timepicker #pickerStartDate></ngx-material-timepicker>-
+      <input [ngxTimepicker]="pickerEndDate" class="timepicker-design" formControlName="Lastdate" (keydown)="validateNumber($event)">
+      <ngx-material-timepicker #pickerEndDate></ngx-material-timepicker>
+    </div>
+    <div class="date-picker">
+      <mat-form-field class="datepicker-design">
+        <input matInput [matDatepicker]="$any(picker)" (keydown)="validateNumber($event)">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="total-time">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="" class="total-time-input">
+      </mat-form-field>
+    </div>
+    <div class="selector-div">
+      <button mat-flat-button color="primary">Add</button>
+    </div>
+
+  </mat-card>
+</form>
+</div>

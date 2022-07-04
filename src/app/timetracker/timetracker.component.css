@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.parent {
+  display: flex;
+  text-align: center;
+}
+
+.mat-div {
+  display: flex;
+  width: 82%;
+  margin: 20px 0 0 20px;
+  position: fixed;
+  justify-content: space-between
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.border:hover {
+  border: 1px solid gainsboro;
+}
+
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0;
+}
+
+.Input-div {
+  width: 28%;
+}
+
+/*********project selector div**********/
+.selection-content-div {
+  min-height: 250px;
+}
+.inside-select-div{
+  display: flex;
+ 
+}
+/**************icon-div***************/
+.icon-div {
+  display: flex;
+  align-items: center;
+}
+
+.selector-div {
+  display: flex;
+  align-items: center;
+
+}
+
+/*******************time picker*****************************/
+.timepicker-div {
+  display: flex;
+  align-items: center;
+}
+
+.timepicker-design {
+  min-height: 38px;
+  width: 70px;
+  margin: 0 7px 0 7px;
+  Font:inherit;
+}
+
+.datepicker-design {
+  width: 100%;
+}
+
+.date-picker {
+  width: 7%;
+  font: inherit;
+}
+
+.total-time {
+  width: 75px;
+  display: flex;
+}
+
+.total-time ::ng-deep .mat-form-field-infix,
+.total-time ::ng-deep .mat-form-field-wrapper {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.total-time ::ng-deep .mat-form-field {
+  width: 100%;
+  align-self: center;
+}
+
+.total-time ::ng-deep .mat-form-field-outline {
+  color: rgb(133, 133, 133)
+}
+
+.total-time ::ng-deep .mat-form-field-outline .mat-form-field-outline-start {
+  border-radius: 1px 0 0 1px;
+}
+
+.total-time ::ng-deep .mat-form-field-outline .mat-form-field-outline-end {
+  border-radius: 0 1px 1px 0;
+}
+
+.total-time-input {
+  height: 43px;
+  width: 100%;
+}
+
+.example-section {
+  margin: 12px 0;
+}
+
+.icon-div ::ng-deep .mat-select .mat-select-arrow-wrapper {
+  opacity: 0;
+  top: 70px;
+  position: relative;
+}
+
+
+.example{
+  width: 100%;
+}
+
+.selector ::ng-deep .none .mat-form-field-wrapperr{
+  padding-bottom: 0;
+}

@@ -1,0 +1,16 @@
+
+.mat-icon{
+    vertical-align: center;
+    margin-right: 1rem;
+    color: #ffffff;
+}
+.mat-list-item{
+    color:#ffffff;
+    font-size: 0.8rem;
+    height: 44px;
+    margin-bottom: 4px;
+    
+}
+.list-item-active:hover{
+    background-color:rgba(64, 82, 215, 0.768); 
+}

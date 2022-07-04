@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.img{
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+}
+.header-para{
+  margin-bottom: 0px;
+}
